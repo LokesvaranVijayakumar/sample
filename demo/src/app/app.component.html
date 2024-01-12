@@ -1,0 +1,65 @@
+<!-- <div class="container my-5"> -->
+<!-- <app-server></app-server> -->
+<!-- <app-products></app-products> -->
+<!-- <app-ecomm></app-ecomm> -->
+<!-- </div> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <ul class="nav nav-tabs">
+        <li
+          class="nav-item"
+          role="presentation"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <a href="" class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item" role="presentation" routerLinkActive="active">
+          <a href="" class="nav-link" routerLink="server">Server</a>
+        </li>
+        <li class="nav-item" role="presentation" routerLinkActive="active">
+          <a href="" class="nav-link" routerLink="products">Products</a>
+        </li>
+        <li class="nav-item" role="presentation" routerLinkActive="active">
+          <a href="" class="nav-link" routerLink="ecomm">Ecomm</a>
+        </li>
+        <li class="nav-item" role="presentation" routerLinkActive="active">
+          <a href="" class="nav-link" routerLink="tforms">TForms</a>
+        </li>
+        <li class="nav-item" role="presentation" routerLinkActive="active">
+          <a href="" class="nav-link" routerLink="rforms">RForms</a>
+        </li>
+        <li class="nav-item" role="presentation" routerLinkActive="active">
+          <a href="" class="nav-link" routerLink="users">Users</a>
+        </li>
+        <li class="nav-item" role="presentation" routerLinkActive="active">
+          <a href="" class="nav-link" routerLink="parent">Parent</a>
+        </li>
+        <li class="nav-item" role="presentation" routerLinkActive="active">
+          <a href="" class="nav-link" routerLink="pipes">Pipes</a>
+        </li>
+        <li class="nav-item" role="presentation" routerLinkActive="active">
+          <a href="" class="nav-link" routerLink="customeremail"
+            >CustomerEmail</a
+          >
+        </li>
+        <li class="nav-item" role="presentation" routerLinkActive="active">
+          <a href="" class="nav-link" routerLink="customername">CustomerName</a>
+        </li>
+        <li class="nav-item" role="presentation" routerLinkActive="active">
+          <a href="" class="nav-link" routerLink="getapi">GetAPI</a>
+        </li>
+        <li class="nav-item" role="presentation" routerLinkActive="active">
+          <a href="" class="nav-link" routerLink="postapi">PostAPI</a>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <div class="col">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

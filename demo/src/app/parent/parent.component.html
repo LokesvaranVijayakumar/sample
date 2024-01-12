@@ -1,0 +1,10 @@
+<!-- <h2>Data Transfer - Parent to child</h2>
+<app-child [item]="data" [item1]="data"></app-child>
+
+<input type="text" #box />
+
+<button class="btn btn-info" (click)="updateData(box.value)">Update</button> -->
+
+<h2>Data Transfer - Child to Parent</h2>
+<h2>{{ title }}</h2>
+<app-child (dataoutputemitted)="updateTitle($event)"></app-child>

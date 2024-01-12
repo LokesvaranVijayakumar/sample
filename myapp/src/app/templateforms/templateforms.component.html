@@ -1,0 +1,86 @@
+
+<div class="container">
+  <div class="card my-1 mx-5">
+    <div class="card-header">
+        <h3 class="card-title text-muted text-center">Template Driven Form</h3>
+    </div>
+    <div class="card-body mx-5 my-2">
+      <form #contactForm="ngForm" (submit)="onSubmit(contactForm)" required>
+        <div class="form-group my-2">
+          <label for="firstname" class="form-label">First Name </label>
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            class="form-control"
+            [(ngModel)]="contact.firstname"
+            #firstname="ngModel"
+            required
+          />
+          <span *ngIf="!firstname.valid">Invalid firstname</span>
+        </div>
+        <div class="form-group my-2">
+          <label for="lastname" class="form-label">Last Name </label>
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            class="form-control"
+            [(ngModel)]="contact.lastname"
+          />
+        </div>
+        <div class="form-group my-2">
+          <label for="email" class="form-label">Email</label>
+          <input type="text" name="email" id="email" class="form-control" [(ngModel)]="contact.email"/>
+        </div>
+        <div class="form-group my-2">
+          <label for="gender" class="form-check-label">Gender </label>
+          <div class="form-check">
+            <input
+              type="radio"
+              value="male"
+              name="gender"
+              id="gender"
+              class="form-check-input"
+              [(ngModel)]="contact.gender"
+            />
+            <label for="gender" class="form-check-label">Male </label>
+          </div>
+          <div class="form-check">
+            <input
+              type="radio"
+              value="female"
+              name="gender"
+              id="gender"
+              class="form-check-input"
+              [(ngModel)]="contact.gender"
+            />
+            <label for="gender" class="form-check-label">Female </label>
+          </div>
+        </div>
+        <div class="form-group my-2">
+          <div class="form-check">
+            <label for="married" class="form-check-label">Married</label>
+            <input
+              type="checkbox"
+              class="form-check-input"
+              name="married"
+              id="married"
+              [(ngModel)]="contact.married"
+            />
+          </div>
+        </div>
+        <div class="form-group my-2">
+          <label for="country" class="form-label">Country</label>
+          <select name="country" id="country" class="form-select" [(ngModel)]="contact.country">
+            <option selected>Select</option>
+            <option [ngValue]="country.id" *ngFor="let country of countryList">{{country.name}}</option>
+          </select>
+        </div>
+        <div class="form-group my-2">
+            <button class="btn btn-primary" [disabled]="!contactForm.valid" type="submit" >Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
